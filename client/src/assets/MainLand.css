@@ -1,0 +1,15 @@
+#sec-main-land {
+  height: 460px;
+  background-color: var(--peru-950);
+}
+
+.box-center {
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+}
+
+.box-main-land {
+  margin-top: 70px;
+}

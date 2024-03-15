@@ -1,20 +1,37 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  --peru-50: #f8f5ee;
+  --peru-100: #efe7d2;
+  --peru-200: #e0cfa8;
+  --peru-300: #ceb176;
+  --peru-400: #bf9650;
+  --peru-500: #ae8142;
+  --peru-600: #976737;
+  --peru-700: #794e2f;
+  --peru-800: #66412d;
+  --peru-900: #58382b;
+  --peru-950: #321d16;
 }
 
 body {
-  background-color: var(--color5);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.8px;
   overflow-x: hidden;
   margin: 0 auto;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
