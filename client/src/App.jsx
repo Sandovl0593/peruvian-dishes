@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
-import router from "./routes/root.tsx";
-import { Footer } from "./components/Footer.tsx";
+import router from "./routes/root";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
