@@ -2,7 +2,7 @@ import "../assets/Demo.css";
 
 export const Demo = () => {
   return (
-    <section>
+    <section id="sec-demo">
       <div id="input-demo">
         <textarea></textarea>
         <button></button>
