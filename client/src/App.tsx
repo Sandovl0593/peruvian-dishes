@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import router from "./routes/root.tsx";
+import { Footer } from "./components/Footer.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           ></Route>
         ))}
       </Routes>
+      <Footer />
     </div>
   );
 }

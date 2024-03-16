@@ -1,4 +1,4 @@
-nav {
+header {
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -8,11 +8,11 @@ nav {
   font-size: 18px;
 }
 
-#logo, #nav-options {
+#logo, nav {
   margin: 14px 0;
 }
 
-#nav-options {
+nav {
   display: flex;
   align-content: center;
   justify-content: space-between;

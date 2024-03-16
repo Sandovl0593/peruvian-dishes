@@ -1,5 +1,6 @@
 import { Home } from "../views/Home";
-import { About } from "../views/About";
+import { Demo } from "../views/Demo";
+import { Documentation } from "../views/Documentation";
 
 const router = [
   {
@@ -7,8 +8,12 @@ const router = [
     element: <Home />,
   },
   {
-    path: "/about",
-    element: <About />,
+    path: "/demo",
+    element: <Demo />,
+  },
+  {
+    path: "/docs",
+    element: <Documentation />,
   },
 ];
 

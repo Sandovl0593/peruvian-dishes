@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <nav>
-      <div id="logo">Peruvian</div>
-      <div id="nav-options">
-        <Link to="/">
-          <div>About Us</div>
+    <header>
+      <div id="logo">
+        <Link to="/">Peruvian</Link>
+      </div>
+      <nav>
+        <Link to="/demo">
+          <div>Demo</div>
         </Link>
-        <Link to="/">
-          <div>Examples</div>
-        </Link>
-        <Link to="/">
+        <Link to="/docs">
           <div>Documentation</div>
         </Link>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };

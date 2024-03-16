@@ -1,4 +1,48 @@
 #sec-incentive {
-  height: 500px;
-  background-color: var(--peru-800);
+  height: 60rem;
+  background-color: var(--peru-700);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.box-incentive {
+  display: flex;
+  height: 40%;
+  width: 70%;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box-incentive:first-child .content-incentive {
+  margin-right: 60px;
+}
+
+.box-incentive:last-child .content-incentive {
+  margin-left: 60px;
+}
+
+.image-incentive picture {
+  height: 100%;
+}
+
+img {
+  /* aspect-ratio: 16/14; */
+}
+
+.image-incentive {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+ 
+.image-incentive img {
+  width: 400px;
+}
+
+.content-incentive {
+  width: 50%;
+  height: 100px;
+  text-align: center;
 }
