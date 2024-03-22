@@ -1,0 +1,61 @@
+CREATE TABLE GASTRONOMIA (
+    id VARCHAR(255) PRIMARY KEY not null,
+    name VARCHAR(255) not null,
+    resume text not null,
+    depart VARCHAR(255) not null,
+    tipo VARCHAR(255) not null
+);
+
+CREATE TABLE ALIMENTO_NATIVO (
+    id VARCHAR(255) PRIMARY KEY not null,
+    name VARCHAR(255) not null,
+    description text not null,
+    tipo VARCHAR(255) not null
+);
+
+CREATE TABLE PROCEDIMIENTO (
+    gastro_id VARCHAR(255) not null,
+    instruccion VARCHAR(255) not null,
+    numero_instruccion INT not null,
+    FOREIGN KEY (gastro_id) REFERENCES GASTRONOMIA(id)
+);
+
+CREATE TABLE INGREDIENTE (
+    id VARCHAR(255) PRIMARY KEY not null,
+    alimento_id VARCHAR(255) not null,
+    gastro_id VARCHAR(255) not null,
+    cantidad INT not null,
+    paraneter VARCHAR(255) not null,
+    FOREIGN KEY (gastro_id) REFERENCES GASTRONOMIA(id)
+);
+
+CREATE TABLE ALIMENTO_ESPECIE (
+    id VARCHAR(255) PRIMARY KEY not null,
+    name VARCHAR(255) not null,
+    description text not null,
+    alimento_nativo_id VARCHAR(255) not null,
+    FOREIGN KEY (alimento_nativo_id) REFERENCES ALIMENTO_NATIVO(id)
+);
+
+CREATE TABLE ALIMENTO_DERIVADO (
+    id VARCHAR(255) PRIMARY KEY not null,
+    name VARCHAR(255) not null,
+    description text not null,
+    alimento_nativo_id VARCHAR(255) not null,
+    FOREIGN KEY (alimento_nativo_id) REFERENCES ALIMENTO_NATIVO(id)
+);
+
+CREATE TABLE LUGAR_DE_CULTIVO (
+    id VARCHAR(255) PRIMARY KEY not null,
+    name VARCHAR(255) not null,
+    provincia VARCHAR(255) not null,
+    depart_perteneciente VARCHAR(255) not null
+);
+
+CREATE TABLE PROCEDENCIA (
+    alimento_especie_id VARCHAR(255) not null,
+    lugar_cultivo_id VARCHAR(255) not null,
+    tipo_produccion VARCHAR(255) not null,
+    FOREIGN KEY (alimento_especie_id) REFERENCES ALIMENTO_ESPECIE(id),
+    FOREIGN KEY (lugar_cultivo_id) REFERENCES LUGAR_DE_CULTIVO(id)
+);
